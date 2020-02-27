@@ -24,7 +24,7 @@ class NewController extends Controller
             throw $e;
         }
 
-        setcookie('feedback', 'success');
+        setcookie('feedback', 'success', ['path' => '/', 'samesite' => 'None', 'expires' => time()+60]);
         $this->redirect('/manager');
     }
 
